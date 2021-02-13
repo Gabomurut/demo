@@ -17,11 +17,11 @@ public class DemoApplication {
 		Admin.addTeacher("Marcelo", "Lopez", 2222, true);
 		Admin.addTeacher("Jhon", "Smith", 3333, false);
 		Admin.addAssignment("matematica", "tarde", "moreno", 40);
-		Admin.addAssignment("alegbra", "mañana", "Fitz", 30);
+		Admin.addAssignment("algebra", "mañana", "Fitz", 30);
 		Admin.showAssignments();
 		Admin.showTeachers();
-		Admin.deleteAssignment(1);
-		Admin.deleteTeacher(1);
+		Admin.deleteAssignment("algebra");
+		Admin.deleteTeacher("Jhon");
 		Admin.showAssignments();
 		Admin.showTeachers();
 

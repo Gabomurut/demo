@@ -9,10 +9,11 @@ public class Admin {
 
 //Lista de materias
 
-public static List<Assignment> assignments = new ArrayList<>(); 
+public static List<Assignment> assignments = new ArrayList<>();
 
 //Agregar materia a la lista
 public static void addAssignment(String name, String schedule, String teacher, int maxStudents) {
+    
     assignments.add(new Assignment(name,schedule,teacher,maxStudents));
     
 }
@@ -31,11 +32,18 @@ public void editAssignment() {
 
 
 //Borrar materias
-public static void deleteAssignment(int position) {
-
-    assignments.remove(position);
-
+public static void deleteAssignment(String name){
+    
+    for(Assignment assignment: assignments) {
+        if(assignment.getName().equals(name)) {
+            assignments.remove(assignment);
+            break;
+        }
+    }
+    
 }
+
+ 
 
 //Gestionar Teachers ---------------------------------------------------------------------
 
@@ -57,9 +65,13 @@ public void editTeacher() {
 
 }
 
-public static void deleteTeacher(int position) {
 
-        teachers.remove(position);
+public static void deleteTeacher(String name) {
+    for(Teacher teacher:teachers) { 
+        if(teacher.getName().equals(name)) {
+            teachers.remove(teacher);
+            break;
+        }
     
 }
 
@@ -68,5 +80,5 @@ public static void deleteTeacher(int position) {
 
 
 
-
+}
 
