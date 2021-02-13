@@ -13,11 +13,18 @@ public class DemoApplication {
 	public static void main(String[] args) {
 		
 		SpringApplication.run(DemoApplication.class, args);
-		Teachers.showTeachers();
-		Assignments.showAssginments();
-		Admin.addAssignment("Algebra","tarde", "Fitz", 25);
-		
-		
+		Admin.addTeacher("Juan", "Aurelio", 1234, true);
+		Admin.addTeacher("Marcelo", "Lopez", 2222, true);
+		Admin.addTeacher("Jhon", "Smith", 3333, false);
+		Admin.addAssignment("matematica", "tarde", "moreno", 40);
+		Admin.addAssignment("alegbra", "mañana", "Fitz", 30);
+		Admin.showAssignments();
+		Admin.showTeachers();
+		Admin.deleteAssignment(1);
+		Admin.deleteTeacher(1);
+		Admin.showAssignments();
+		Admin.showTeachers();
+
 	}
 
 }
