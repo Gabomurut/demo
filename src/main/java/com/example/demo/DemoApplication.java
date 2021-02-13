@@ -14,6 +14,10 @@ public class DemoApplication {
 		
 		SpringApplication.run(DemoApplication.class, args);
 		Teachers.showTeachers();
+		Assignments.showAssginments();
+		Admin.addAssignment("Algebra","tarde", "Fitz", 25);
+		
+		
 	}
 
 }

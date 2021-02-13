@@ -45,7 +45,18 @@ public class Assignment {
         this.teacher = teacher;
         this.maxStudents = maxStudents;
     }
+
+    @Override
+    public String toString() {
+        return "Assignment{" +
+                "name='" + name + '\'' +
+                ", schedule='" + schedule + '\'' +
+                ", professor ='" + teacher + '\'' +
+                ", availability=" + maxStudents +
+                '}';
+    }
     
+
 
    
 }

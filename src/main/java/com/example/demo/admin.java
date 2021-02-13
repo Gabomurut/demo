@@ -1,16 +1,17 @@
 package com.example.demo;
 
+import java.util.List;
 
-
-public class admin {
+public class Admin {
 
 //Gestionar Materias
 
-public Assignment newAssignment(String name, String schedule, String teacher, int maxStudents) { 
-   Assignment assignment = new Assignment(name, schedule, teacher, maxStudents);
+public static void addAssignment(String name, String schedule, String teacher, int maxStudents) { 
 
-   return assignment;
-
+    List< Assignment > assginments = Assignments.all();
+    assginments.add(new Assignment(name, schedule, teacher, maxStudents));
+    for (Assignment assignment:assginments) System.out.println(assignment);
+   
 }
 
 
@@ -36,9 +37,8 @@ public void editAssignmentMaxStudents(Assignment assignment, int maxStudents) {
 
 public void deleteAssignment() {
 
-
-
 }
+
 
 
 
