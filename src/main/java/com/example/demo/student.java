@@ -1,6 +1,6 @@
 package com.example.demo;
 
-public class student {
+public class Student {
 
 //Listar Materias -----------------------------------------
 
@@ -17,9 +17,14 @@ public void infoAssignments() {
 
 // Inscripción en la materia
 
-public void doAssignment(Assignment assignment) {
-    assignment.setMaxStudents(assignment.getMaxStudents()-1);
-
+public static void doAssignment(String name) {
+    for(Assignment assignment : Admin.assignments) {
+        if(assignment.getName().equals(name)) {
+            assignment.setMaxStudents(assignment.getMaxStudents()-1);
+            System.out.println("Inscripto en Algebra");
+            
+        }
+    }
 }
 
 
